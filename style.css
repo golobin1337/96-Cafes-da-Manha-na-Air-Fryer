@@ -531,3 +531,7 @@ html { scroll-padding-top: 48px; }
 
 /* ====== BOTÕES ARREDONDADOS ====== */
 .btn { border-radius: 999px; }
+
+/* ====== PARCELAMENTO ====== */
+.installments { font-size: 14px; font-weight: 500; color: var(--coffee-2); margin-top: 4px; }
+.plan.premium .installments { color: #CFE3DE; margin-top: -4px; }
