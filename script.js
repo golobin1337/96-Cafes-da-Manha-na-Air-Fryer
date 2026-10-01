@@ -93,8 +93,11 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   const track = carousel.querySelector(".car-track");
   const slides = [...track.children];
   const dotsBox = carousel.querySelector(".car-dots");
+  const DELAY = 4000; // tempo de cada depoimento na tela (ms)
   let current = 0;
   let timer;
+
+  const step = () => (slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth);
 
   const dots = slides.map((_, i) => {
     const dot = document.createElement("button");
@@ -108,7 +111,8 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
   function goTo(i) {
     current = (i + slides.length) % slides.length;
-    track.scrollTo({ left: slides[current].offsetLeft - track.offsetLeft - 4 });
+    track.scrollTo({ left: current * step(), behavior: "smooth" });
+    markActive();
   }
 
   function markActive() {
@@ -117,22 +121,18 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
   // Atualiza a bolinha ativa quando a pessoa arrasta com o dedo
   track.addEventListener("scroll", () => {
-    const step = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : 1;
-    current = Math.min(slides.length - 1, Math.round(track.scrollLeft / step));
+    current = Math.min(slides.length - 1, Math.round(track.scrollLeft / step()));
     markActive();
   }, { passive: true });
 
   carousel.querySelector(".prev").addEventListener("click", () => { goTo(current - 1); restart(); });
   carousel.querySelector(".next").addEventListener("click", () => { goTo(current + 1); restart(); });
 
-  // Troca sozinho a cada 4s; pausa quando a pessoa interage
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Passa sozinho; depois que a pessoa arrasta ou clica, recomeça a contagem
   function restart() {
     clearInterval(timer);
-    if (!reduceMotion) timer = setInterval(() => goTo(current + 1), 4000);
+    timer = setInterval(() => goTo(current + 1), DELAY);
   }
-  carousel.addEventListener("mouseenter", () => clearInterval(timer));
-  carousel.addEventListener("mouseleave", restart);
   track.addEventListener("touchstart", () => clearInterval(timer), { passive: true });
   track.addEventListener("touchend", restart);
 
