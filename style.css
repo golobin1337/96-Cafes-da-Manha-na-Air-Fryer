@@ -522,3 +522,12 @@ html { scroll-padding-top: 48px; }
 }
 .bonus-card > div:last-child { flex: 1; min-width: 0; }
 @media (min-width: 761px) { .bonus-list { grid-template-columns: repeat(3, 1fr); } }
+
+/* ====== BÔNUS: RÓTULO EM TEXTO ====== */
+.bonus-label {
+  display: block; font-size: 13px; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--orange); margin: 6px 0 2px;
+}
+
+/* ====== BOTÕES ARREDONDADOS ====== */
+.btn { border-radius: 999px; }

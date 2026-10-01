@@ -3,8 +3,8 @@
    (Kiwify, Hotmart, Eduzz, Cakto etc.)
    ========================================================= */
 const CHECKOUT = {
-  basico: "",   // ex.: "https://pay.kiwify.com.br/XXXXXX"
-  premium: "",  // ex.: "https://pay.kiwify.com.br/YYYYYY"
+  basico: "https://mundoconhecimento.mycartpanda.com/checkout/210975167:1",
+  premium: "https://mundoconhecimento.mycartpanda.com/checkout/211727235:1",
 };
 
 /* Repassa UTMs e outros parâmetros da URL para o checkout,
