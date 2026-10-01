@@ -419,7 +419,7 @@ html { scroll-padding-top: 48px; }
 .plan.premium .gifts { background: #F7FCF8; }
 
 /* ====== DEPOIMENTOS COM FOTO (ANTES E DEPOIS) ====== */
-#quotesCarousel { max-width: 520px; }
+#quotesCarousel { max-width: 460px; }
 .car-track .t-card {
   flex: 0 0 100%; scroll-snap-align: center;
   background: var(--white); border-radius: var(--radius); overflow: hidden;
@@ -440,7 +440,7 @@ html { scroll-padding-top: 48px; }
 .car-track .t-print {
   display: flex; align-items: center; justify-content: center; padding: 12px;
 }
-.t-print img { max-width: 100%; max-height: 680px; width: auto; height: auto; border-radius: 10px; }
+.t-print img { max-width: 100%; max-height: 600px; width: auto; height: auto; border-radius: 10px; }
 
 /* ====== GALERIA — "E MUITO MAIS..." + BOTÃO ====== */
 .gallery .more {
@@ -485,3 +485,13 @@ html { scroll-padding-top: 48px; }
   .value-total { padding: 16px 14px; }
   .value-total strong { font-size: 26px; }
 }
+
+/* ====== BOTÃO "QUERO MINHAS 96 RECEITAS AGORA" EM UMA LINHA ====== */
+.hero .btn, .gallery .btn, .final .btn {
+  white-space: nowrap; letter-spacing: 0;
+  font-size: clamp(13px, 4.1vw, 18px); padding-left: 16px; padding-right: 16px;
+}
+.plan.premium .btn { white-space: nowrap; }
+
+/* ====== IMAGEM DO HERO ====== */
+.hero-img { aspect-ratio: 766 / 558; max-width: 640px; background: none; }
