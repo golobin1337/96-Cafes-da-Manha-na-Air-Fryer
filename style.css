@@ -495,3 +495,21 @@ html { scroll-padding-top: 48px; }
 
 /* ====== IMAGEM DO HERO ====== */
 .hero-img { aspect-ratio: 766 / 558; max-width: 640px; background: none; }
+.plan.basic .btn { white-space: nowrap; }
+
+/* ====== QUEM CRIOU AS RECEITAS ====== */
+.author { background: var(--cream); }
+.author-photo {
+  width: 100%; max-width: 320px; margin: 0 auto 32px; aspect-ratio: 504 / 729;
+  border-radius: 24px; overflow: hidden; box-shadow: var(--shadow);
+  border: 6px solid var(--white);
+}
+.author-photo img { width: 100%; height: 100%; object-fit: cover; }
+.author-copy { text-align: center; }
+.author-copy p { color: var(--coffee-2); font-size: 17.5px; margin-bottom: 16px; }
+.author-copy p:last-child { margin-bottom: 0; }
+.author-copy strong { color: var(--ink); }
+.author-copy .author-hook {
+  font-family: "Poppins", sans-serif; font-weight: 800; color: var(--ink);
+  font-size: clamp(22px, 3.6vw, 30px); line-height: 1.25; margin-bottom: 22px;
+}
