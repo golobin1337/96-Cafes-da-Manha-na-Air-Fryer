@@ -544,3 +544,9 @@ html { scroll-padding-top: 48px; }
 .plan-img img { width: 100%; height: auto; }
 .plan-img { background: none; padding: 0; box-shadow: none; border-radius: 0; margin: 14px auto 24px; }
 .plan-img img { filter: drop-shadow(0 12px 22px rgba(0, 0, 0, .35)); }
+
+/* ====== "NÃO INCLUI" RISCADO ====== */
+.plan .not-included li {
+  text-decoration: line-through; text-decoration-color: var(--red);
+  text-decoration-thickness: 1.5px; opacity: .75;
+}
