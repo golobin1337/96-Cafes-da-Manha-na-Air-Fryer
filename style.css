@@ -547,6 +547,7 @@ html { scroll-padding-top: 48px; }
 
 /* ====== "NÃO INCLUI" RISCADO ====== */
 .plan .not-included li {
-  text-decoration: line-through; text-decoration-color: var(--red);
+  text-decoration: line-through; text-decoration-color: #9A9A9A;
   text-decoration-thickness: 1.5px; opacity: .75;
 }
+.plan-img { max-width: 280px; }
