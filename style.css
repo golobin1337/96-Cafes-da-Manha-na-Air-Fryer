@@ -570,3 +570,28 @@ html { scroll-padding-top: 48px; }
 /* ====== FAIXA DO TOPO COM ALTURA FIXA (evita a página "pular" ao carregar) ====== */
 .topbar { height: 36px; line-height: 36px; padding-top: 0; padding-bottom: 0; white-space: nowrap; overflow: hidden; }
 body { padding-top: 36px; }
+
+/* ====== BARRA FIXA DO PLANO COMPLETO ====== */
+.sticky-buy {
+  position: fixed; left: 50%; bottom: 10px; z-index: 90;
+  width: calc(100% - 20px); max-width: 560px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--deep); color: #fff; border-radius: 18px; padding: 10px 10px 10px 16px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .35);
+  transform: translate(-50%, 140%); opacity: 0; pointer-events: none;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.sticky-buy.show { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+.sb-info { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.sb-info strong { font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; font-size: 16px; }
+.sb-info span { font-size: 12.5px; color: #CFE3DE; }
+.sb-info s { color: #FF8A73; }
+.sb-info b { font-size: 16px; font-weight: 800; color: #4ADE80; }
+.sb-btn {
+  flex: none; text-decoration: none; text-transform: uppercase; white-space: nowrap;
+  background: var(--green); color: #fff; font-weight: 800; font-size: 14px;
+  padding: 14px 20px; border-radius: 999px; box-shadow: 0 4px 0 var(--green-dark);
+}
+.sb-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--green-dark); }
+footer { padding-bottom: 110px; }
+@media (max-width: 360px) { .sb-btn { padding: 12px 14px; font-size: 13px; } }

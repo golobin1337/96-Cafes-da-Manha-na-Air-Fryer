@@ -360,7 +360,7 @@ window.addEventListener("load",function(){setTimeout(function(){
           <div class="big-price"><small>R$</small>27<small>,90</small></div>
           <div class="installments">Ou em 6x de R$ 5,31</div>
         </div>
-        <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn">Quero levar tudo agora!</a>
+        <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn" id="premiumBtn">Quero levar tudo agora!</a>
         <div class="safe">Acesso imediato · Compra Segura · Garantia de 30 dias</div>
       </div>
 
@@ -453,6 +453,16 @@ window.addEventListener("load",function(){setTimeout(function(){
   <p>© 2026 · 96 Cafés da Manhã na Air Fryer · Todos os direitos reservados.</p>
   <p>Este produto não substitui o acompanhamento de um nutricionista ou médico.</p>
 </footer>
+
+<!-- Barra fixa do Plano Completo: aparece depois que a pessoa passa do botão de R$ 27,90 -->
+<div class="sticky-buy" id="stickyBuy" aria-hidden="true">
+  <div class="sb-info">
+    <strong>Plano Completo</strong>
+    <span>de <s>R$ 197</s> por apenas</span>
+    <b>R$ 27,90</b>
+  </div>
+  <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="sb-btn" tabindex="-1">Quero levar tudo</a>
+</div>
 
 </body>
 </html>

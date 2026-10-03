@@ -108,3 +108,19 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   markActive();
   restart();
 });
+
+/* ---------- Barra fixa do Plano Completo ----------
+   Só aparece depois que a pessoa passou (rolou para baixo) do botão de R$ 27,90. */
+const stickyBuy = document.getElementById("stickyBuy");
+const premiumBtn = document.getElementById("premiumBtn");
+if (stickyBuy && premiumBtn) {
+  const updateSticky = () => {
+    const show = premiumBtn.getBoundingClientRect().bottom < 0;
+    stickyBuy.classList.toggle("show", show);
+    stickyBuy.setAttribute("aria-hidden", !show);
+    stickyBuy.querySelector("a").tabIndex = show ? 0 : -1;
+  };
+  window.addEventListener("scroll", updateSticky, { passive: true });
+  window.addEventListener("resize", updateSticky);
+  updateSticky();
+}
