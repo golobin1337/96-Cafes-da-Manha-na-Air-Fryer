@@ -1,33 +1,14 @@
 /* =========================================================
-   CONFIGURAÇÃO — cole aqui os links de checkout da sua plataforma
-   (Kiwify, Hotmart, Eduzz, Cakto etc.)
+   Os links de checkout ficam direto no HTML (botões com data-checkout),
+   assim funcionam antes mesmo deste arquivo carregar.
+   Aqui só repassamos as UTMs da URL para o checkout.
    ========================================================= */
-const CHECKOUT = {
-  basico: "https://pay.wiapy.com/-2j_wSlt3sEB",
-  premium: "https://pay.wiapy.com/efAzeKR0gK0R",
-};
-
-/* Repassa UTMs e outros parâmetros da URL para o checkout,
-   para não perder o rastreamento das campanhas. */
-function withUrlParams(url) {
-  const params = window.location.search;
-  if (!params) return url;
-  return url + (url.includes("?") ? "&" : "?") + params.slice(1);
+if (window.location.search) {
+  document.querySelectorAll("[data-checkout]").forEach((btn) => {
+    const url = btn.getAttribute("href");
+    btn.href = url + (url.includes("?") ? "&" : "?") + window.location.search.slice(1);
+  });
 }
-
-/* ---------- Links de checkout ---------- */
-document.querySelectorAll("[data-checkout]").forEach((btn) => {
-  const url = CHECKOUT[btn.dataset.checkout];
-  if (url) btn.href = withUrlParams(url);
-});
-
-/* ---------- Imagens: remove a <img> se o arquivo não existir,
-   deixando o placeholder visível ---------- */
-document.querySelectorAll(".hero-img img, .recipe img, .t-photo img").forEach((img) => {
-  const drop = () => img.remove();
-  if (img.complete && img.naturalWidth === 0) drop();
-  else img.addEventListener("error", drop);
-});
 
 /* ---------- FAQ: abre uma pergunta por vez ---------- */
 const faqItems = document.querySelectorAll(".faq details");
@@ -59,33 +40,21 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("visible"));
 }
 
-/* ---------- Faixa do topo: mostra sempre a data de hoje ---------- */
-const todayDate = document.getElementById("todayDate");
-if (todayDate) {
-  todayDate.textContent = new Date().toLocaleDateString("pt-BR", {
-    day: "2-digit", month: "2-digit", year: "numeric",
-  });
+/* ---------- Embaralha os depoimentos a cada visita ----------
+   Primeiro os prints sobre as receitas (.t-print), depois os de emagrecimento.
+   A ordem dentro de cada grupo muda a cada visita. */
+function shuffle(list) {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
 }
-
-/* Garante que a faixa fixa não cubra o início da página, mesmo se quebrar em 2 linhas */
-const topbar = document.querySelector(".topbar");
-function fitTopbar() {
-  if (!topbar) return;
-  const h = topbar.offsetHeight;
-  document.body.style.paddingTop = h + "px";
-  document.documentElement.style.scrollPaddingTop = h + 12 + "px";
-}
-window.addEventListener("resize", fitTopbar);
-fitTopbar();
-
-/* ---------- Embaralha os depoimentos a cada visita ---------- */
 document.querySelectorAll(".carousel .car-track").forEach((track) => {
   const items = [...track.children];
-  for (let i = items.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [items[i], items[j]] = [items[j], items[i]];
-  }
-  items.forEach((item) => track.appendChild(item));
+  const recipes = shuffle(items.filter((el) => el.classList.contains("t-print")));
+  const results = shuffle(items.filter((el) => !el.classList.contains("t-print")));
+  [...recipes, ...results].forEach((item) => track.appendChild(item));
 });
 
 /* ---------- Carrossel de depoimentos ---------- */

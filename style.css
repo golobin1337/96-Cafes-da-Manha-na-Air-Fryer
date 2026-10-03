@@ -18,20 +18,20 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Roboto", "Roboto Fallback", sans-serif;
   background: var(--cream);
   color: var(--ink);
   line-height: 1.6;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 .narrow { max-width: 760px; margin: 0 auto; }
 section { padding: 64px 0; }
 
-h1, h2, h3 { font-family: "Poppins", sans-serif; line-height: 1.15; letter-spacing: -.01em; }
+h1, h2, h3 { font-family: "Poppins", "Poppins Fallback", sans-serif; line-height: 1.15; letter-spacing: -.01em; }
 h2 { font-size: clamp(26px, 4.6vw, 40px); text-align: center; margin-bottom: 18px; }
 .eyebrow {
   display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em;
@@ -136,7 +136,7 @@ h2 { font-size: clamp(26px, 4.6vw, 40px); text-align: center; margin-bottom: 18p
   box-shadow: var(--shadow); position: relative; font-size: 18px; font-weight: 600;
 }
 .quote::before {
-  content: "“"; font-family: "Poppins", sans-serif; font-size: 64px; line-height: 1;
+  content: "“"; font-family: "Poppins", "Poppins Fallback", sans-serif; font-size: 64px; line-height: 1;
   color: var(--orange); position: absolute; top: 6px; left: 16px; opacity: .35;
 }
 .quote p { position: relative; padding-top: 18px; }
@@ -156,7 +156,7 @@ h2 { font-size: clamp(26px, 4.6vw, 40px); text-align: center; margin-bottom: 18p
   font-weight: 800; font-size: 11px; line-height: 1.1; text-transform: uppercase;
 }
 .bonus-num strong { display: block; font-size: 20px; }
-.bonus-card h3 { font-family: "Roboto", sans-serif; font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+.bonus-card h3 { font-family: "Roboto", "Roboto Fallback", sans-serif; font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
 .price-tag { font-size: 14px; }
 .price-tag s { color: var(--coffee-2); }
 .price-tag .free {
@@ -195,7 +195,7 @@ h2 { font-size: clamp(26px, 4.6vw, 40px); text-align: center; margin-bottom: 18p
 .plan .from s { color: var(--red); }
 .plan .price { font-size: 15px; font-weight: 600; margin-top: 2px; }
 .plan .price strong {
-  display: block; font-family: "Poppins", sans-serif; font-size: 54px; line-height: 1.05; color: var(--green);
+  display: block; font-family: "Poppins", "Poppins Fallback", sans-serif; font-size: 54px; line-height: 1.05; color: var(--green);
 }
 .plan.basic .price strong { color: var(--ink); font-size: 44px; }
 .plan .btn { margin-top: 20px; font-size: 16px; padding: 18px 18px; }
@@ -248,9 +248,9 @@ footer {
 footer p + p { margin-top: 6px; }
 
 /* ====== ANIMAÇÃO DE ENTRADA ====== */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
 
 /* ====== PLANO BÁSICO — NÃO INCLUI ====== */
 .not-included { max-width: 380px; margin: 0 auto 22px; text-align: left; }
@@ -289,7 +289,7 @@ footer p + p { margin-top: 6px; }
 .price-box .from { font-size: 16px; font-weight: 600; color: var(--coffee-2); }
 .price-box .from s { color: var(--red); font-weight: 700; }
 .big-price {
-  font-family: "Poppins", sans-serif; font-weight: 800; color: var(--green);
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; color: var(--green);
   font-size: 84px; line-height: 1; letter-spacing: -.03em; margin: 6px 0 10px;
   display: flex; justify-content: center; align-items: flex-start;
 }
@@ -431,7 +431,7 @@ html { scroll-padding-top: 48px; }
 }
 .t-photo img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1; }
 .t-body { padding: 18px 20px 20px; }
-.t-result { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 24px; color: var(--orange); }
+.t-result { font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; font-size: 24px; color: var(--orange); }
 .t-quote { font-weight: 700; font-size: 17px; line-height: 1.4; margin: 6px 0 8px; }
 .t-name { font-size: 14px; color: var(--coffee-2); }
 .t-stars { color: #F5B301; font-size: 20px; letter-spacing: 3px; margin-top: 4px; }
@@ -444,7 +444,7 @@ html { scroll-padding-top: 48px; }
 
 /* ====== GALERIA — "E MUITO MAIS..." + BOTÃO ====== */
 .gallery .more {
-  font-family: "Poppins", sans-serif; font-weight: 800; text-align: center;
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; text-align: center;
   font-size: clamp(20px, 3vw, 28px); line-height: 1.3; color: var(--ink);
   max-width: 640px; margin: 36px auto 22px;
 }
@@ -472,11 +472,11 @@ html { scroll-padding-top: 48px; }
   padding: 18px 20px; border-top: 2px dashed var(--line); font-weight: 700; font-size: 18px;
 }
 .value-total strong {
-  font-family: "Poppins", sans-serif; font-size: 30px; color: var(--red);
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-size: 30px; color: var(--red);
   text-decoration: line-through; text-decoration-thickness: 3px;
 }
 .value-but {
-  font-family: "Poppins", sans-serif; font-weight: 800; text-align: center; color: #fff;
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; text-align: center; color: #fff;
   font-size: clamp(22px, 3.6vw, 30px); line-height: 1.25; margin: 36px 0 10px;
 }
 @media (max-width: 560px) {
@@ -510,7 +510,7 @@ html { scroll-padding-top: 48px; }
 .author-copy p:last-child { margin-bottom: 0; }
 .author-copy strong { color: var(--ink); }
 .author-copy .author-hook {
-  font-family: "Poppins", sans-serif; font-weight: 800; color: var(--ink);
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; color: var(--ink);
   font-size: clamp(22px, 3.6vw, 30px); line-height: 1.25; margin-bottom: 22px;
 }
 
@@ -551,3 +551,22 @@ html { scroll-padding-top: 48px; }
   text-decoration-thickness: 1.5px; opacity: .75;
 }
 .plan-img { max-width: 280px; }
+
+/* ====== PREÇO ABAIXO DA IMAGEM DO HERO ====== */
+.hero-price { margin: -8px auto 26px; text-align: center; line-height: 1.2; }
+.hp-from {
+  color: var(--red); font-weight: 800; font-size: 18px;
+  text-decoration: line-through; text-decoration-thickness: 2px;
+}
+.hp-label {
+  color: var(--coffee-2); font-weight: 700; font-size: 14px;
+  letter-spacing: .06em; text-transform: uppercase; margin: 6px 0 2px;
+}
+.hp-value {
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; color: var(--green);
+  font-size: clamp(38px, 7vw, 48px); line-height: 1.1;
+}
+
+/* ====== FAIXA DO TOPO COM ALTURA FIXA (evita a página "pular" ao carregar) ====== */
+.topbar { height: 36px; line-height: 36px; padding-top: 0; padding-bottom: 0; white-space: nowrap; overflow: hidden; }
+body { padding-top: 36px; }
