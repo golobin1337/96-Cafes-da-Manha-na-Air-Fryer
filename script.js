@@ -3,8 +3,8 @@
    (Kiwify, Hotmart, Eduzz, Cakto etc.)
    ========================================================= */
 const CHECKOUT = {
-  basico: "https://mundoconhecimento.mycartpanda.com/checkout/210975167:1",
-  premium: "https://mundoconhecimento.mycartpanda.com/checkout/211727235:1",
+  basico: "https://pay.wiapy.com/-2j_wSlt3sEB",
+  premium: "https://pay.wiapy.com/efAzeKR0gK0R",
 };
 
 /* Repassa UTMs e outros parâmetros da URL para o checkout,
