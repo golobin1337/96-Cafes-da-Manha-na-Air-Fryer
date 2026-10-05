@@ -28,7 +28,7 @@ img{max-width:100%;height:auto;display:block}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
 .narrow{max-width:760px;margin:0 auto}
 section{padding:64px 0}
-.pain{background:var(--white)}
+.features{background:var(--white)}
 h1,h2,h3{font-family:"Poppins","Poppins Fallback",sans-serif;line-height:1.15;letter-spacing:-.01em}
 .hl{color:var(--green)}
 .topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:#054A05;color:#fff;text-align:center;font-size:14px;height:36px;line-height:36px;padding:0 16px;white-space:nowrap;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.15)}
@@ -39,7 +39,8 @@ h1,h2,h3{font-family:"Poppins","Poppins Fallback",sans-serif;line-height:1.15;le
 .hero p.sub{font-size:clamp(17px,2.4vw,20px);color:var(--coffee-2);max-width:680px;margin:0 auto 30px}
 .hero-img{max-width:640px;margin:0 auto 32px;aspect-ratio:766/558;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);position:relative}
 .hero-img img{width:100%;height:100%;object-fit:cover}
-.hero-price{margin:-8px auto 26px;text-align:center;line-height:1.2}
+.hero-desc{font-size:17px;color:var(--coffee-2);max-width:600px;margin:-8px auto 22px;line-height:1.55}
+.hero-price{margin:0 auto 26px;text-align:center;line-height:1.2}
 .hp-from{color:var(--red);font-weight:800;font-size:18px;text-decoration:line-through;text-decoration-thickness:2px}
 .hp-label{color:var(--coffee-2);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:6px 0 2px}
 .hp-value{font-family:"Poppins","Poppins Fallback",sans-serif;font-weight:800;color:var(--green);font-size:clamp(38px,7vw,48px);line-height:1.1}
@@ -97,12 +98,14 @@ window.addEventListener("load",function(){setTimeout(function(){
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="wrap">
-    <h1>96 Cafés da Manhã Fit na Air Fryer, <span class="hl">Práticos e Econômicos</span></h1>
-    <p class="sub">Varie seu café da manhã com receitas prontas em menos de 15 minutos de forma saudável, barata, saborosa e com ingredientes simples.</p>
+    <h1>96 CAFÉS DA MANHÃ FITNESS NA AIR FRYER <span class="hl">PRONTOS EM ATÉ 15 MINUTOS</span></h1>
+    <p class="sub">Opções rápidas e práticas para variar o café da manhã sem depender sempre do pão nem perder tempo.</p>
 
     <div class="hero-img">
       <img src="imagens/hero.webp" alt="Material 96 Cafés da Manhã na Air Fryer" width="766" height="558" fetchpriority="high" loading="eager">
     </div>
+
+    <p class="hero-desc">Tenha 96 receitas organizadas, com ingredientes, quantidades, tempo, temperatura e passo a passo, prontas para consultar no celular e preparar na Air Fryer.</p>
 
     <div class="hero-price">
       <div class="hp-from">De R$ 67,00</div>
@@ -110,341 +113,236 @@ window.addEventListener("load",function(){setTimeout(function(){
       <div class="hp-value">R$ 14,90</div>
     </div>
 
-    <a href="#valor" class="btn">Quero os 96 cafés fitness</a>
+    <a href="#planos" class="btn">Quero os 96 cafés fitness</a>
     <div class="trust">
       <span><svg style="color:var(--orange)"><use href="#i-bolt"/></svg>Acesso imediato</span>
       <span><svg style="color:var(--green)"><use href="#i-lock"/></svg>Compra Segura</span>
-      <span><svg style="color:var(--green)"><use href="#i-shield"/></svg>Garantia de 30 dias</span>
+      <span><svg style="color:var(--green)"><use href="#i-shield"/></svg>Garantia de 90 dias</span>
     </div>
   </div>
 </header>
 
-<!-- ================= DOBRA 2 — DOR ================= -->
-<section class="pain">
+<!-- ================= DOBRA 2 — BENEFÍCIOS DO PRODUTO ================= -->
+<section class="features">
   <div class="wrap narrow">
-    <h2>Você acorda com fome… mas <span class="hl">não saber o que comer?</span></h2>
-    <p class="lead">Você quer emagrecer e comer melhor, mas na correria da manhã acaba voltando sempre para aquele pedaço de bolo ou o pão com margarina por falta de opções. <strong class="hl">Isso acontece com você?</strong></p>
+    <h2>Mais variedade para o seu <span class="hl">café da manhã</span></h2>
+    <p class="lead">Tudo pensado para facilitar suas manhãs.</p>
     <ul class="checklist">
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Não sabe o que preparar no lugar do pão</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Não tem tempo para receitas demoradas</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Enjoou de comer sempre a mesma coisa</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Acha que comida saudável custa caro</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Quer algo rápido, gostoso e que sustente</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Precisa de opções simples para não sair da rotina</li>
-      <li><span class="ico"><svg><use href="#i-x"/></svg></span>Vive com a barriga inchada e intestino preso</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Receitas prontas em até 15 minutos</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Ingredientes simples e fáceis de encontrar</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Opções doces e salgadas</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Quantidades já definidas</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Tempo e temperatura da Air Fryer</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Passo a passo direto ao ponto</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Opções para sair do pão com ovo</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Mais praticidade sem complicar a rotina</li>
     </ul>
+    <div class="center cta-row"><a href="#planos" class="btn">Quero mais variedade</a></div>
   </div>
 </section>
 
-<!-- ================= DOBRA 3 — BENEFÍCIOS ================= -->
-<section class="benefits dark">
-  <div class="wrap narrow">
-    <h2><span class="hl">Chega</span> de acordar sem saber o que preparar.</h2>
-    <p class="lead">Com as receitas prontas, você consegue:</p>
-    <ul class="checklist">
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Variar o café da manhã sem inventar receita</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Economizar tempo antes de sair de casa</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Usar ingredientes mais simples no dia a dia</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Sair da monotonia do pão com ovo</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Ter opções práticas, saudáveis e rápidas</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Perder peso de verdade</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Desinchar logo na primeira semana</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Ter mais energia no dia a dia</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= DOBRA 4 — GALERIA ================= -->
-<!-- Fotos das receitas: imagens/1.webp ... 10.webp -->
-<section class="gallery">
+<!-- ================= DOBRA 3 — VEJA ALGUMAS RECEITAS ================= -->
+<!-- Fotos das receitas: imagens/1.webp ... 10.webp (e versões -360 para celular) -->
+<section class="recipes dark">
   <div class="wrap">
-    <h2>Veja algumas <span class="hl">vai preparar</span></h2>
-    <div class="grid-recipes">
-      <div class="recipe reveal"><img src="imagens/1.webp" srcset="imagens/1-360.webp 360w, imagens/1.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/2.webp" srcset="imagens/2-360.webp 360w, imagens/2.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/3.webp" srcset="imagens/3-360.webp 360w, imagens/3.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/4.webp" srcset="imagens/4-360.webp 360w, imagens/4.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/5.webp" srcset="imagens/5-360.webp 360w, imagens/5.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/6.webp" srcset="imagens/6-360.webp 360w, imagens/6.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/7.webp" srcset="imagens/7-360.webp 360w, imagens/7.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/8.webp" srcset="imagens/8-360.webp 360w, imagens/8.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/9.webp" srcset="imagens/9-360.webp 360w, imagens/9.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-      <div class="recipe reveal"><img src="imagens/10.webp" srcset="imagens/10-360.webp 360w, imagens/10.webp 600w" sizes="(max-width: 860px) calc(50vw - 21px), 200px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-    </div>
-    <p class="more">E muito mais receitas para você comer sem culpa...</p>
-    <div class="center"><a href="#valor" class="btn">Quero minhas 96 receitas agora</a></div>
-  </div>
-</section>
-
-<!-- ================= DOBRA 5 — PROVA SOCIAL ================= -->
-<section class="proof dark">
-  <div class="wrap">
-    <h2>Quem já fez <span class="hl">aprovou!</span></h2>
-    <!-- Para adicionar depoimentos, copie um bloco <div class="t-card">...</div> -->
-    <div class="carousel" id="quotesCarousel">
-      <button class="car-btn prev" type="button" aria-label="Depoimento anterior">‹</button>
+    <h2>96 ideias para você <span class="hl">não precisar comer sempre a mesma coisa</span></h2>
+    <div class="carousel recipe-carousel" id="recipeCarousel">
+      <button class="car-btn prev" type="button" aria-label="Receita anterior">‹</button>
       <div class="car-track">
-        <div class="t-card t-print"><img src="imagens/download_1.webp" alt="Mensagem de WhatsApp da cliente Ana Carolina" loading="lazy" decoding="async" width="400" height="500"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_22_1.webp" alt="Mensagem de WhatsApp da cliente Patrícia Almeida" loading="lazy" decoding="async" width="427" height="856"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_2_completo_1.webp" alt="Mensagem de WhatsApp da cliente Mariana Alves" loading="lazy" decoding="async" width="427" height="817"></div>
-        <div class="t-card t-print"><img src="imagens/depoimento_03_1.webp" alt="Comentários de clientes no Instagram" loading="lazy" decoding="async" width="400" height="500"></div>
-        <!-- DEPOIMENTO 1 -->
-        <div class="t-card">
-          <div class="t-photo"><img src="imagens/antes_depois_4_cxxom7gr_1.webp" alt="Antes e depois da Claudia" loading="lazy" decoding="async" width="860" height="860"></div>
-          <div class="t-body">
-            <div class="t-result">-8kg</div>
-            <p class="t-quote">"Voltei a ter energia pra cuidar dos meus filhos."</p>
-            <div class="t-name">Claudia, 36 anos</div>
-            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
-          </div>
-        </div>
-        <!-- DEPOIMENTO 2 -->
-        <div class="t-card">
-          <div class="t-photo"><img src="imagens/depoimento_antes_depois_csldwdkt_1.webp" alt="Antes e depois da Rosana" loading="lazy" decoding="async" width="860" height="860"></div>
-          <div class="t-body">
-            <div class="t-result">-7kg</div>
-            <p class="t-quote">"Minha pressão normalizou e o médico reduziu meu remédio."</p>
-            <div class="t-name">Rosana, 52 anos</div>
-            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
-          </div>
-        </div>
-        <!-- DEPOIMENTO 3 -->
-        <div class="t-card">
-          <div class="t-photo"><img src="imagens/antes_depois_maria_bjz_z_hl_1.webp" alt="Antes e depois da Maria" loading="lazy" decoding="async" width="800" height="1080"></div>
-          <div class="t-body">
-            <div class="t-result">-9kg</div>
-            <p class="t-quote">"Perdi 9kg em 30 dias. Tive que jogar algumas calças e shorts fora."</p>
-            <div class="t-name">Maria, 47 anos</div>
-            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
-          </div>
-        </div>
+        <div class="r-slide"><img src="imagens/1.webp" srcset="imagens/1-360.webp 360w, imagens/1.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/2.webp" srcset="imagens/2-360.webp 360w, imagens/2.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/3.webp" srcset="imagens/3-360.webp 360w, imagens/3.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/4.webp" srcset="imagens/4-360.webp 360w, imagens/4.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/5.webp" srcset="imagens/5-360.webp 360w, imagens/5.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/6.webp" srcset="imagens/6-360.webp 360w, imagens/6.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/7.webp" srcset="imagens/7-360.webp 360w, imagens/7.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/8.webp" srcset="imagens/8-360.webp 360w, imagens/8.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/9.webp" srcset="imagens/9-360.webp 360w, imagens/9.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide"><img src="imagens/10.webp" srcset="imagens/10-360.webp 360w, imagens/10.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
       </div>
-      <button class="car-btn next" type="button" aria-label="Próximo depoimento">›</button>
+      <button class="car-btn next" type="button" aria-label="Próxima receita">›</button>
       <div class="car-dots" role="tablist"></div>
     </div>
-    <p class="closing">Foi exatamente para essas dificuldades que as <span class="hl">96 receitas</span> foram organizadas.</p>
+    <p class="more">E muitas outras opções doces e salgadas.</p>
+    <div class="center"><a href="#planos" class="btn">Quero acessar as 96 receitas</a></div>
+  </div>
+</section>
+
+<!-- ================= DOBRA 4 — O QUE VOCÊ VAI RECEBER ================= -->
+<section class="deliver">
+  <div class="wrap narrow">
+    <h2>Não é só uma <span class="hl">lista de receitas</span></h2>
+    <p class="lead">Cada receita foi organizada para você abrir e preparar sem ficar procurando informação em vários lugares.</p>
+    <ul class="checklist two-cols">
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Ingredientes</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Quantidades</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Tempo de preparo</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Temperatura da Air Fryer</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Modo de preparo passo a passo</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Receitas com ingredientes simples</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Lista de compras organizada</li>
+      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Tabela de substituições</li>
+    </ul>
+    <p class="closing-line">Você abre, escolhe e <span class="hl">prepara.</span></p>
   </div>
 </section>
 
 <!-- ================= DOBRA 5 — BÔNUS ================= -->
 <section class="bonus">
   <div class="wrap">
-    <h2>Leve também <span class="hl">6 bônus</span><br> para facilitar ainda mais sua rotina:</h2>
+    <h2>Você ainda recebe <span class="hl">6 bônus</span></h2>
     <div class="bonus-list">
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus1.webp" alt="Capa do Bônus 01" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 1</span><h3>Cardápios Semanais de Café da Manhã para Emagrecimento</h3>
+        <div><span class="bonus-label">Bônus 01</span><h3>7 Cardápios Semanais de Café da Manhã</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus2.webp" alt="Capa do Bônus 02" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 2</span><h3>30 Substituições Baratas para Variar as Receitas</h3>
+        <div><span class="bonus-label">Bônus 02</span><h3>30 Substituições Baratas para Variar as Receitas</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus3.webp" alt="Capa do Bônus 03" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 3</span><h3>Listas de Compras Econômicas para a Semana</h3>
+        <div><span class="bonus-label">Bônus 03</span><h3>4 Listas de Compras Econômicas para a Semana</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus4.webp" alt="Capa do Bônus 04" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 4</span><h3>20 Cafés da Manhã Mais Sacientes para Segurar a Fome até o Almoço</h3>
+        <div><span class="bonus-label">Bônus 04</span><h3>20 Cafés da Manhã Mais Sacientes para Segurar a Fome até o Almoço</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus5.webp" alt="Capa do Bônus 05" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 5</span><h3>21 Cafés da Manhã para Desinchar e Ajudar o Intestino a Funcionar Melhor</h3>
+        <div><span class="bonus-label">Bônus 05</span><h3>21 Cafés da Manhã para Desinchar e Ajudar o Intestino a Funcionar Melhor</h3>
           <div class="price-tag">Valor: <s>R$ 37</s><span class="free">GRÁTIS</span></div></div>
       </div>
       <div class="bonus-card reveal">
         <img class="bonus-img" src="imagens/bonus6.webp" alt="Capa do Bônus 06" width="416" height="234" loading="lazy" decoding="async">
-        <div><span class="bonus-label">Bônus 6</span><h3>Guia de Congelamento e Descongelamento com 20 Preparos para Deixar Prontos e Aquecer na Air Fryer</h3>
+        <div><span class="bonus-label">Bônus 06</span><h3>Guia de Congelamento e Descongelamento com 20 Preparos para Deixar Prontos e Aquecer na Air Fryer</h3>
           <div class="price-tag">Valor: <s>R$ 27</s><span class="free">GRÁTIS</span></div></div>
       </div>
     </div>
+    <div class="bonus-total"><span>R$ 192 em bônus</span></div>
   </div>
 </section>
 
-<!-- ================= ANCORAGEM DE VALOR ================= -->
-<section class="value dark" id="valor">
+<!-- ================= DOBRA 6 — AUTORIDADE ================= -->
+<section class="author">
   <div class="wrap narrow">
-    <h2>Veja quanto tudo isso <span class="hl">custaria separado</span></h2>
-    <p class="lead">Se você fosse comprar cada material separadamente, pagaria muito mais para ter tudo isso organizado e pronto para usar.</p>
-
-    <div class="value-card">
-      <table class="value-table">
-        <thead>
-          <tr><th>O que você recebe</th><th>Valor separado</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>96 Cafés da Manhã na Air Fryer</td><td>R$ 97,00</td></tr>
-          <tr><td>Cardápios Semanais para Emagrecimento</td><td>R$ 37,00</td></tr>
-          <tr><td>30 Substituições Baratas</td><td>R$ 27,00</td></tr>
-          <tr><td>Listas de Compras Econômicas</td><td>R$ 27,00</td></tr>
-          <tr><td>20 Cafés da Manhã Mais Sacientes</td><td>R$ 37,00</td></tr>
-          <tr><td>21 Cafés da Manhã para Desinchar e Ajudar o Intestino</td><td>R$ 37,00</td></tr>
-          <tr><td>Guia de Congelamento e Descongelamento com 20 Preparos</td><td>R$ 27,00</td></tr>
-        </tbody>
-      </table>
-      <div class="value-total">
-        <span>Você pagaria:</span>
-        <strong>R$ 289,00</strong>
-      </div>
+    <div class="author-photo reveal">
+      <img src="imagens/persona.webp" alt="Nutri Marcela Almeida" width="504" height="729" loading="lazy" decoding="async">
     </div>
-
-    <p class="value-but">Mas você <span class="hl">não vai <br>pagar R$ 289,00.</span></p>
-    <p class="lead">Hoje, nesta página, você pode <br>garantir o pacote completo por uma condição especial.</p>
+    <div class="author-copy">
+      <p class="author-hook">Quem é a <span class="hl">Nutri Marcela Almeida?</span></p>
+      <p>Eu também já estive acima do peso e sei o <strong>quanto isso mexe com a autoestima e a segurança.</strong></p>
+      <p>Me formei em Nutrição em 2014 pela Universidade de São Paulo (USP) e comecei a transformar minha própria alimentação.</p>
+      <p>Nesse processo, percebi que o café da manhã era um dos momentos mais difíceis: pouca variedade, falta de tempo e sempre as mesmas opções.</p>
+      <p>Foi dessa necessidade que nasceram essas <strong>96 receitas na Air Fryer.</strong></p>
+      <p class="author-close">Vamos juntas transformar o seu café da manhã em um momento mais simples, prático e gostoso.</p>
+    </div>
   </div>
 </section>
 
-<!-- ================= DOBRA 6 — PLANOS ================= -->
+<!-- ================= DOBRA 7 — OFERTA ================= -->
 <section class="plans" id="planos">
   <div class="wrap">
-    <h2>Escolha <span class="hl">seu plano</span></h2>
-    <p class="lead">Oferta com <strong class="hl">76% de desconto</strong> — válida enquanto esta página estiver no ar</p>
+    <h2>Escolha a opção ideal para <span class="hl">sua rotina</span></h2>
     <div class="plan-grid">
+
+      <!-- PLANO PREMIUM -->
+      <div class="plan premium reveal">
+        <span class="badge">Mais completo</span>
+        <div class="name">Plano Premium</div>
+        <div class="plan-img"><img src="imagens/price.webp" alt="Livro 96 Cafés da Manhã na Air Fryer com os 6 bônus" loading="lazy" decoding="async" width="395" height="327"></div>
+        <h3>96 Receitas de Café da Manhã na Air Fryer</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>96 receitas completas</li>
+          <li><svg><use href="#i-check"/></svg>Lista de compras</li>
+          <li><svg><use href="#i-check"/></svg>Tabela de substituições</li>
+          <li><svg><use href="#i-check"/></svg>7 Cardápios Semanais</li>
+          <li><svg><use href="#i-check"/></svg>30 Substituições Baratas</li>
+          <li><svg><use href="#i-check"/></svg>4 Listas de Compras Econômicas</li>
+          <li><svg><use href="#i-check"/></svg>20 Cafés da Manhã Mais Sacientes</li>
+          <li><svg><use href="#i-check"/></svg>21 Cafés da Manhã para Desinchar e Ajudar o Intestino</li>
+          <li><svg><use href="#i-check"/></svg>Guia de Congelamento e Descongelamento</li>
+        </ul>
+        <div class="price-box">
+          <div class="from">De <s>R$ 197</s> por apenas</div>
+          <div class="big-price"><small>R$</small>29<small>,90</small></div>
+        </div>
+        <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn" id="premiumBtn">Quero o plano premium</a>
+        <div class="safe">Acesso imediato · Compra Segura · Garantia de 90 dias</div>
+      </div>
 
       <!-- PLANO BÁSICO -->
       <div class="plan basic reveal">
         <div class="name">Plano Básico</div>
-        <h3>Plano básico iniciante</h3>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>36 receitas de café da manhã na Air Fryer Para Emagrecer</li>
-          <li><svg><use href="#i-check"/></svg>Receba no E-mail e WhatsApp</li>
-          <li><svg><use href="#i-check"/></svg>Garantia de 7 dias</li>
-        </ul>
-        <div class="not-included">
-          <div class="ni-title">Não inclui</div>
-          <ul>
-            <li><svg><use href="#i-x"/></svg>Lista de compras</li>
-            <li><svg><use href="#i-x"/></svg>Tabela de substituições</li>
-            <li><svg><use href="#i-x"/></svg>Cardápios Semanais</li>
-            <li><svg><use href="#i-x"/></svg>30 Substituições Baratas</li>
-            <li><svg><use href="#i-x"/></svg>4 Listas de Compras Econômicas</li>
-            <li><svg><use href="#i-x"/></svg>20 Cafés da Manhã Mais Sacientes</li>
-            <li><svg><use href="#i-x"/></svg>21 Cafés da Manhã para Desinchar e Ajudar o Intestino</li>
-            <li><svg><use href="#i-x"/></svg>Guia de Congelamento e Descongelamento</li>
-          </ul>
-        </div>
+        <h3>36 Receitas de Café da Manhã na Air Fryer</h3>
         <div class="from">De <s>R$ 67</s></div>
         <div class="price">Por apenas <strong>R$ 14,90</strong></div>
-        <div class="installments">Ou em 3x de R$ 5,43</div>
         <a href="https://pay.wiapy.com/-2j_wSlt3sEB" data-checkout="basico" class="btn ghost">Quero o plano básico</a>
       </div>
 
-      <!-- PLANO PREMIUM -->
-      <div class="plan premium reveal">
-        <span class="badge">Mais Vendido</span>
-        <div class="name">Plano Completo</div>
-        <div class="plan-img"><img src="imagens/price.webp" alt="Livro 96 Cafés da Manhã na Air Fryer com os 6 bônus" loading="lazy" decoding="async" width="395" height="327"></div>
-        <h3>PLANO COMPLETO + 6 BÔNUS</h3>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>96 Receitas de Café da Manhã na Air Fryer Para Emagrecer</li>
-          <li><svg><use href="#i-check"/></svg>Tabela de substituições</li>
-          <li><svg><use href="#i-check"/></svg>Receba no E-mail e WhatsApp</li>
-          <li><svg><use href="#i-check"/></svg>Garantia de 30 dias</li>
-        </ul>
-        <div class="gifts">
-          <div class="gifts-title">+ 6 bônus de presente</div>
-          <ul>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 01:</b> Cardápios Semanais</span></li>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 02:</b> 30 Substituições Baratas</span></li>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 03:</b> Listas de Compras Econômicas</span></li>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 04:</b> 20 Cafés da Manhã Mais Sacientes</span></li>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 05:</b> 21 Cafés da Manhã para Desinchar e Ajudar o Intestino</span></li>
-            <li><svg><use href="#i-gift"/></svg><span><b>Bônus 06:</b> Guia de Congelamento e Descongelamento</span></li>
-          </ul>
-        </div>
-        <div class="price-box">
-          <div class="from">De <s>R$ 197</s> por apenas</div>
-          <div class="big-price"><small>R$</small>27<small>,90</small></div>
-          <div class="installments">Ou em 6x de R$ 5,31</div>
-        </div>
-        <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn" id="premiumBtn">Quero levar tudo agora!</a>
-        <div class="safe">Acesso imediato · Compra Segura · Garantia de 30 dias</div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ================= QUEM CRIOU AS RECEITAS ================= -->
-<section class="author">
-  <div class="wrap narrow">
-    <div class="author-photo reveal">
-      <img src="imagens/persona.webp" alt="Nutricionista autora das receitas" width="504" height="729" loading="lazy" decoding="async">
-    </div>
-    <div class="author-copy">
-      <p class="author-hook">Quem é a Nutri Marcela Almeida? <span class="hl"></span></p>
-      <p>Eu também já estive acima do peso e sei o <strong>quanto isso mexe com a autoestima e a segurança.</strong></p>
-      <p>Me formei em Nutrição em 2014 pela Universidade de São Paulo (USP) e comecei a transformar a minha própria alimentação para enfrentar um dos meus maiores desafios: <strong>emagrecer sem abrir mão de comer bem.</strong></p>
-      <p>Nesse processo, percebi que o café da manhã era um dos momentos mais difíceis: pouca variedade, falta de tempo e sempre as mesmas opções.</p>
-      <p>Foi dessa necessidade que nasceram as <strong>96 Receitas de Café da Manhã na Air Fryer</strong> para ajudar outras mulheres a comer melhor, emagrecer e saber exatamente o que preparar pela manhã.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DOBRA 7 — GARANTIA ================= -->
+<!-- ================= DOBRA 8 — GARANTIA ================= -->
 <section class="guarantee">
   <div class="wrap">
     <div class="g-box reveal">
       <svg class="seal" viewBox="0 0 160 160" aria-hidden="true">
         <circle cx="80" cy="80" r="76" fill="#E8772E"/>
         <circle cx="80" cy="80" r="64" fill="none" stroke="#FFF8EE" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="80" y="78" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="50" fill="#FFF8EE">30</text>
+        <text x="80" y="78" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="50" fill="#FFF8EE">90</text>
         <text x="80" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="#FFF8EE">DIAS</text>
         <text x="80" y="120" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="600" font-size="10" letter-spacing="1.5" fill="#FFF8EE">DE GARANTIA</text>
       </svg>
       <div>
-        <h2>Garantia de <span class="hl">30 dias</span></h2>
-        <p>Você tem 30 dias para acessar e conhecer o material.</p>
-        <p>Se por qualquer motivo achar que não é para você, devolvemos 100% do seu dinheiro dentro do prazo da garantia.</p>
+        <h2>Garantia incondicional de <span class="hl">90 dias</span></h2>
+        <p>Você pode acessar o material e conhecer todas as receitas com tranquilidade.</p>
+        <p>Se dentro de 90 dias achar que o produto não é para você, basta solicitar o reembolso.</p>
+        <p>Você recebe 100% do seu dinheiro de volta.</p>
+        <p class="strong">Sem perguntas. Sem burocracia.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= DOBRA 8 — FAQ ================= -->
+<!-- ================= DOBRA 9 — FAQ ================= -->
 <section class="faq">
   <div class="wrap narrow">
     <h2>Perguntas <span class="hl">frequentes</span></h2>
     <div class="faq-list">
       <details>
         <summary>Como recebo as receitas?</summary>
-        <p>O acesso é digital e liberado no E-mail e WhatsApp após a confirmação da compra.</p>
+        <p>O material é digital e o acesso é liberado após a confirmação da compra.</p>
       </details>
       <details>
         <summary>Preciso saber cozinhar?</summary>
-        <p>Não. As receitas trazem ingredientes, quantidades, tempo, temperatura e preparo passo a passo.</p>
+        <p>Não. As receitas possuem ingredientes, quantidades e preparo passo a passo.</p>
       </details>
       <details>
-        <summary>As receitas são feitas somente na Air Fryer?</summary>
-        <p>A proposta do material é facilitar o café da manhã usando a Air Fryer como principal forma de preparo, mas você também pode fazer sem ela.</p>
+        <summary>Preciso ter uma Air Fryer?</summary>
+        <p>Sim. O material foi criado com foco em preparos feitos na Air Fryer.</p>
       </details>
       <details>
-        <summary>Preciso comprar ingredientes caros?</summary>
-        <p>As receitas foram pensadas com foco em ingredientes simples e opções econômicas.</p>
+        <summary>As receitas usam ingredientes difíceis?</summary>
+        <p>As receitas foram pensadas com foco em ingredientes simples e fáceis de encontrar.</p>
       </details>
       <details>
-        <summary>O Plano Básico e o Premium são iguais?</summary>
-        <p>Não. O Básico contém 36 receitas. O Premium contém as 96 receitas e todos os bônus.</p>
+        <summary>Qual a diferença entre o Básico e o Premium?</summary>
+        <p>O Básico possui 36 receitas. O Premium possui as 96 receitas e todos os bônus.</p>
+      </details>
+      <details>
+        <summary>Posso acessar pelo celular?</summary>
+        <p>Sim. O material é digital e pode ser aberto pelo celular.</p>
       </details>
       <details>
         <summary>Como funciona a garantia?</summary>
-        <p>Você tem 30 dias. Se dentro desse prazo decidir que o material não é para você, pode solicitar o reembolso.</p>
+        <p>Você tem 90 dias para conhecer o material. Dentro desse período, pode solicitar o reembolso caso decida que ele não é para você.</p>
       </details>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA FINAL ================= -->
-<section class="final">
-  <div class="wrap narrow">
-    <h2>Comece amanhã com um <span class="hl">café da manhã diferente</span></h2>
-    <p class="lead">96 receitas na Air Fryer, prontas em até 15 minutos, com ingredientes simples.</p>
-    <a href="#planos" class="btn">Quero minhas 96 receitas agora</a>
-    <div class="trust">
-      <span>Acesso imediato</span><span>·</span><span>Compra Segura</span><span>·</span><span>Garantia de 30 dias</span>
     </div>
   </div>
 </section>
@@ -454,14 +352,14 @@ window.addEventListener("load",function(){setTimeout(function(){
   <p>Este produto não substitui o acompanhamento de um nutricionista ou médico.</p>
 </footer>
 
-<!-- Barra fixa do Plano Completo: aparece depois que a pessoa passa do botão de R$ 27,90 -->
+<!-- Barra fixa do Plano Premium: aparece depois que a pessoa passa do botão do Premium -->
 <div class="sticky-buy" id="stickyBuy" aria-hidden="true">
   <div class="sb-info">
-    <strong>Plano Completo</strong>
+    <strong>Plano Premium</strong>
     <span>de <s>R$ 197</s> por apenas</span>
-    <b>R$ 27,90</b>
+    <b>R$ 29,90</b>
   </div>
-  <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="sb-btn" tabindex="-1">Quero levar tudo</a>
+  <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="sb-btn" tabindex="-1">Quero o premium</a>
 </div>
 
 </body>

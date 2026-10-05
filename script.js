@@ -40,46 +40,40 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("visible"));
 }
 
-/* ---------- Embaralha os depoimentos a cada visita ----------
-   Primeiro os prints sobre as receitas (.t-print), depois os de emagrecimento.
-   A ordem dentro de cada grupo muda a cada visita. */
-function shuffle(list) {
-  for (let i = list.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [list[i], list[j]] = [list[j], list[i]];
-  }
-  return list;
-}
-document.querySelectorAll(".carousel .car-track").forEach((track) => {
-  const items = [...track.children];
-  const recipes = shuffle(items.filter((el) => el.classList.contains("t-print")));
-  const results = shuffle(items.filter((el) => !el.classList.contains("t-print")));
-  [...recipes, ...results].forEach((item) => track.appendChild(item));
-});
-
-/* ---------- Carrossel de depoimentos ---------- */
+/* ---------- Carrossel (receitas) ----------
+   Funciona com 1 ou vários itens visíveis por vez; passa sozinho. */
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const track = carousel.querySelector(".car-track");
   const slides = [...track.children];
   const dotsBox = carousel.querySelector(".car-dots");
-  const DELAY = 4000; // tempo de cada depoimento na tela (ms)
+  const DELAY = 3500; // tempo de cada passo (ms)
   let current = 0;
+  let positions = 1;
+  let dots = [];
   let timer;
 
-  const step = () => (slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth);
+  const step = () => (slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth) || 1;
 
-  const dots = slides.map((_, i) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.setAttribute("role", "tab");
-    dot.setAttribute("aria-label", "Ir para o depoimento " + (i + 1));
-    dot.addEventListener("click", () => { goTo(i); restart(); });
-    dotsBox.appendChild(dot);
-    return dot;
-  });
+  // Quantas paradas existem (depende de quantos itens cabem na tela)
+  function buildDots() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    positions = Math.max(1, Math.round(maxScroll / step()) + 1);
+    dotsBox.innerHTML = "";
+    dots = Array.from({ length: positions }, (_, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("role", "tab");
+      dot.setAttribute("aria-label", "Ir para a posição " + (i + 1));
+      dot.addEventListener("click", () => { goTo(i); restart(); });
+      dotsBox.appendChild(dot);
+      return dot;
+    });
+    current = Math.min(current, positions - 1);
+    markActive();
+  }
 
   function goTo(i) {
-    current = (i + slides.length) % slides.length;
+    current = (i + positions) % positions;
     track.scrollTo({ left: current * step(), behavior: "smooth" });
     markActive();
   }
@@ -90,27 +84,28 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
   // Atualiza a bolinha ativa quando a pessoa arrasta com o dedo
   track.addEventListener("scroll", () => {
-    current = Math.min(slides.length - 1, Math.round(track.scrollLeft / step()));
+    current = Math.min(positions - 1, Math.round(track.scrollLeft / step()));
     markActive();
   }, { passive: true });
 
   carousel.querySelector(".prev").addEventListener("click", () => { goTo(current - 1); restart(); });
   carousel.querySelector(".next").addEventListener("click", () => { goTo(current + 1); restart(); });
 
-  // Passa sozinho; depois que a pessoa arrasta ou clica, recomeça a contagem
   function restart() {
     clearInterval(timer);
     timer = setInterval(() => goTo(current + 1), DELAY);
   }
   track.addEventListener("touchstart", () => clearInterval(timer), { passive: true });
   track.addEventListener("touchend", restart);
+  window.addEventListener("resize", buildDots);
+  window.addEventListener("load", buildDots); // recalcula quando o CSS completo terminar de carregar
 
-  markActive();
+  buildDots();
   restart();
 });
 
-/* ---------- Barra fixa do Plano Completo ----------
-   Só aparece depois que a pessoa passou (rolou para baixo) do botão de R$ 27,90. */
+/* ---------- Barra fixa do Plano Premium ----------
+   Só aparece depois que a pessoa passou (rolou para baixo) do botão do Premium. */
 const stickyBuy = document.getElementById("stickyBuy");
 const premiumBtn = document.getElementById("premiumBtn");
 if (stickyBuy && premiumBtn) {
