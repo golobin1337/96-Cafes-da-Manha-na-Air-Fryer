@@ -702,3 +702,35 @@ footer { padding-bottom: 110px; }
 .price-tag .free { background: none; color: var(--green); padding: 0; margin: 0 0 0 10px; font-size: 13px; white-space: nowrap; }
 .price-tag .free::before { content: "✓ "; }
 @media (max-width: 380px) { .bonus-img { flex-basis: 96px; width: 96px; } .bonus-card h3 { font-size: 15px; } }
+
+/* ====== PLANO PREMIUM: BÔNUS COM ÍCONE DE PRESENTE ====== */
+.plan.premium > ul li.is-gift svg { color: #FFB877; }
+
+/* ====== PLANO BÁSICO NO NOVO FORMATO ====== */
+.plan.basic { padding: 0 0 26px; overflow: hidden; text-align: left; }
+.basic-head {
+  background: var(--ink); color: #fff; text-align: center; font-weight: 700; font-size: 14px;
+  padding: 10px 16px; margin-bottom: 22px;
+}
+.plan.basic h3 { text-align: center; font-size: 24px; margin: 0 22px 18px; }
+.plan .basic-list { list-style: none; margin: 0 22px 22px !important; max-width: none !important; display: block !important; }
+.plan .basic-list li {
+  display: flex; align-items: center; gap: 12px; padding: 12px 0;
+  border-bottom: 1px dashed var(--line); font-weight: 500; font-size: 15.5px;
+}
+.plan .basic-list li:last-child { border-bottom: none; }
+.b-ico {
+  flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff;
+  display: grid; place-items: center;
+}
+.plan .basic-list .b-ico svg { width: 15px; height: 15px; margin: 0; color: #fff; }
+.basic-out { margin: 0 22px 24px; }
+.bo-title {
+  font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--coffee-2); margin-bottom: 10px;
+}
+.plan .basic-out ul { list-style: none; display: grid; gap: 8px; margin: 0 !important; max-width: none !important; }
+.plan .basic-out li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: #8A8F7A; font-weight: 400 !important; }
+.plan .basic-out li svg { flex: none; width: 16px; height: 16px; color: #A9AD9A !important; margin-top: 3px; }
+.plan.basic .from, .plan.basic .price { text-align: center; }
+.plan.basic .btn { display: block; width: calc(100% - 44px); margin: 20px auto 0; }
