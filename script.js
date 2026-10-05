@@ -40,7 +40,24 @@ if ("IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("visible"));
 }
 
-/* ---------- Carrossel (receitas) ----------
+/* ---------- Depoimentos: receitas primeiro, emagrecimento depois ----------
+   A ordem dentro de cada grupo muda a cada visita. */
+function shuffle(list) {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+}
+const quotesTrack = document.querySelector("#quotesCarousel .car-track");
+if (quotesTrack) {
+  const items = [...quotesTrack.children];
+  const recipes = shuffle(items.filter((el) => el.classList.contains("t-print")));
+  const results = shuffle(items.filter((el) => !el.classList.contains("t-print")));
+  [...recipes, ...results].forEach((item) => quotesTrack.appendChild(item));
+}
+
+/* ---------- Carrosséis (receitas e depoimentos) ----------
    Funciona com 1 ou vários itens visíveis por vez; passa sozinho. */
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const track = carousel.querySelector(".car-track");
@@ -69,6 +86,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       return dot;
     });
     current = Math.min(current, positions - 1);
+    carousel.classList.toggle("static", positions <= 1);
     markActive();
   }
 

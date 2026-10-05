@@ -634,3 +634,71 @@ footer { padding-bottom: 110px; }
   .r-slide { flex-basis: 85%; scroll-snap-align: center; }
   .recipe-carousel .car-track { gap: 12px; }
 }
+
+/* ====== HEADLINE DO HERO EM 3 LINHAS NO CELULAR ====== */
+@media (max-width: 560px) { .hero h1 { font-size: 5.8vw; line-height: 1.18; } }
+
+/* ====== DOBRA 2 — BENEFÍCIOS EM CARDS ====== */
+.feature-grid {
+  list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px;
+}
+@media (min-width: 760px) { .feature-grid { grid-template-columns: repeat(4, 1fr); } }
+.feature {
+  background: var(--cream); border: 1px solid var(--line); border-radius: 20px;
+  padding: 22px 14px 20px; text-align: center; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  font-weight: 700; font-size: 15.5px; line-height: 1.3; color: var(--ink);
+}
+.f-ico {
+  width: 52px; height: 52px; border-radius: 50%; background: var(--orange-soft);
+  display: grid; place-items: center; font-size: 25px; line-height: 1;
+}
+@media (max-width: 400px) { .feature { font-size: 14.5px; padding: 18px 10px; } }
+
+/* ====== ALTERNÂNCIA DE FUNDOS (com depoimentos na dobra 4) ======
+   branco → verde → creme → branco → creme → branco → creme → branco → creme */
+.proof { background: var(--cream); }
+.proof .car-track .t-card { box-shadow: 0 12px 30px rgba(59, 36, 24, .14); }
+.deliver { background: var(--white); }
+.deliver .checklist li { background: var(--cream); }
+.bonus { background: var(--cream); }
+.bonus-card { background: var(--white); }
+.author { background: var(--white); }
+.plans { background: var(--cream); }
+.guarantee { background: var(--white); }
+.g-box { background: var(--cream); }
+.faq { background: var(--cream); }
+.faq details { background: var(--white); }
+
+/* ====== FICHAS DE RECEITA (e1, e2, e3) — aparecem inteiras, sem corte ====== */
+.r-slide.r-sheet { aspect-ratio: 438 / 584; background: #fff; }
+.r-sheet img { object-fit: contain; }
+@media (min-width: 861px) { .recipe-carousel { max-width: 1000px; } }
+/* Quando todas cabem na tela, esconde setas e bolinhas */
+.carousel.static .car-btn, .carousel.static .car-dots { display: none; }
+.carousel.static { padding: 0; }
+
+/* ====== BÔNUS COMPACTOS (imagem à esquerda, texto à direita) ====== */
+.bonus-list { grid-template-columns: 1fr; gap: 26px 18px; margin-top: 40px; }
+@media (min-width: 761px) { .bonus-list { grid-template-columns: repeat(2, 1fr); } }
+.bonus-card {
+  position: relative; flex-wrap: nowrap; align-items: center; gap: 14px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+  padding: 22px 14px 14px; box-shadow: 0 8px 22px rgba(59, 36, 24, .08);
+}
+.bonus-img {
+  flex: 0 0 118px; width: 118px; margin: 0; border-radius: 10px;
+  aspect-ratio: 416 / 234; object-fit: cover;
+}
+.bonus-card > div:last-child { flex: 1; min-width: 0; }
+.bonus-label {
+  position: absolute; top: -12px; left: -6px; margin: 0;
+  background: var(--green-dark); color: #fff; font-size: 11.5px; letter-spacing: .08em;
+  padding: 5px 12px; border-radius: 4px 999px 999px 4px; box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+}
+.bonus-card h3 { font-size: 16px; line-height: 1.3; margin-bottom: 6px; }
+.price-tag { font-size: 13px; font-weight: 700; color: var(--coffee-2); }
+.price-tag s { color: var(--red); }
+.price-tag .free { background: none; color: var(--green); padding: 0; margin: 0 0 0 10px; font-size: 13px; white-space: nowrap; }
+.price-tag .free::before { content: "✓ "; }
+@media (max-width: 380px) { .bonus-img { flex-basis: 96px; width: 96px; } .bonus-card h3 { font-size: 15px; } }

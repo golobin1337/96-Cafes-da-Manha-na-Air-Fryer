@@ -52,6 +52,7 @@ h1,h2,h3{font-family:"Poppins","Poppins Fallback",sans-serif;line-height:1.15;le
 .trust svg{width:16px;height:16px;flex:none}
 .js .reveal{opacity:0}
 @media (max-width:400px){.topbar{font-size:12.5px;padding:0 10px}.topbar-date{margin-left:4px}}
+@media (max-width:560px){.hero h1{font-size:5.8vw;line-height:1.18}}
 @media (prefers-reduced-motion:reduce){.btn{animation:none}html{scroll-behavior:auto}}
 </style>
 
@@ -117,7 +118,7 @@ window.addEventListener("load",function(){setTimeout(function(){
     <div class="trust">
       <span><svg style="color:var(--orange)"><use href="#i-bolt"/></svg>Acesso imediato</span>
       <span><svg style="color:var(--green)"><use href="#i-lock"/></svg>Compra Segura</span>
-      <span><svg style="color:var(--green)"><use href="#i-shield"/></svg>Garantia de 90 dias</span>
+      <span><svg style="color:var(--green)"><use href="#i-shield"/></svg>Garantia de 30 dias</span>
     </div>
   </div>
 </header>
@@ -127,38 +128,31 @@ window.addEventListener("load",function(){setTimeout(function(){
   <div class="wrap narrow">
     <h2>Mais variedade para o seu <span class="hl">café da manhã</span></h2>
     <p class="lead">Tudo pensado para facilitar suas manhãs.</p>
-    <ul class="checklist">
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Receitas prontas em até 15 minutos</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Ingredientes simples e fáceis de encontrar</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Opções doces e salgadas</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Quantidades já definidas</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Tempo e temperatura da Air Fryer</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Passo a passo direto ao ponto</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Opções para sair do pão com ovo</li>
-      <li><span class="ico"><svg><use href="#i-check"/></svg></span>Mais praticidade sem complicar a rotina</li>
+    <ul class="feature-grid">
+      <li class="feature"><span class="f-ico" aria-hidden="true">⏱️</span>Receitas prontas em até 15 minutos</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">🛒</span>Ingredientes simples e fáceis de encontrar</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">🥞</span>Opções doces e salgadas</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">⚖️</span>Quantidades já definidas</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">🌡️</span>Tempo e temperatura da Air Fryer</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">📖</span>Passo a passo direto ao ponto</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">🍳</span>Opções para sair do pão com ovo</li>
+      <li class="feature"><span class="f-ico" aria-hidden="true">✨</span>Mais praticidade sem complicar a rotina</li>
     </ul>
     <div class="center cta-row"><a href="#planos" class="btn">Quero mais variedade</a></div>
   </div>
 </section>
 
 <!-- ================= DOBRA 3 — VEJA ALGUMAS RECEITAS ================= -->
-<!-- Fotos das receitas: imagens/1.webp ... 10.webp (e versões -360 para celular) -->
+<!-- Fichas das receitas: imagens/e1.webp, e2.webp, e3.webp -->
 <section class="recipes dark">
   <div class="wrap">
     <h2>96 ideias para você <span class="hl">não precisar comer sempre a mesma coisa</span></h2>
     <div class="carousel recipe-carousel" id="recipeCarousel">
       <button class="car-btn prev" type="button" aria-label="Receita anterior">‹</button>
       <div class="car-track">
-        <div class="r-slide"><img src="imagens/1.webp" srcset="imagens/1-360.webp 360w, imagens/1.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/2.webp" srcset="imagens/2-360.webp 360w, imagens/2.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/3.webp" srcset="imagens/3-360.webp 360w, imagens/3.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/4.webp" srcset="imagens/4-360.webp 360w, imagens/4.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/5.webp" srcset="imagens/5-360.webp 360w, imagens/5.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/6.webp" srcset="imagens/6-360.webp 360w, imagens/6.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/7.webp" srcset="imagens/7-360.webp 360w, imagens/7.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/8.webp" srcset="imagens/8-360.webp 360w, imagens/8.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/9.webp" srcset="imagens/9-360.webp 360w, imagens/9.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
-        <div class="r-slide"><img src="imagens/10.webp" srcset="imagens/10-360.webp 360w, imagens/10.webp 600w" sizes="(max-width: 560px) 85vw, 330px" alt="Receita de café da manhã na Air Fryer" loading="lazy" decoding="async" width="600" height="450"></div>
+        <div class="r-slide r-sheet"><img src="imagens/e1.webp" alt="Ficha da receita Panqueca de Banana com Aveia" loading="lazy" decoding="async" width="438" height="584"></div>
+        <div class="r-slide r-sheet"><img src="imagens/e2.webp" alt="Ficha da receita Pão de Queijo de Tapioca" loading="lazy" decoding="async" width="438" height="584"></div>
+        <div class="r-slide r-sheet"><img src="imagens/e3.webp" alt="Ficha da receita Muffin de Ovo com Legumes" loading="lazy" decoding="async" width="438" height="584"></div>
       </div>
       <button class="car-btn next" type="button" aria-label="Próxima receita">›</button>
       <div class="car-dots" role="tablist"></div>
@@ -168,7 +162,56 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 4 — O QUE VOCÊ VAI RECEBER ================= -->
+<!-- ================= DOBRA 4 — DEPOIMENTOS ================= -->
+<section class="proof">
+  <div class="wrap">
+    <h2>Quem já fez <span class="hl">aprovou!</span></h2>
+    <!-- Para adicionar depoimentos, copie um bloco <div class="t-card">...</div> -->
+    <div class="carousel" id="quotesCarousel">
+      <button class="car-btn prev" type="button" aria-label="Depoimento anterior">‹</button>
+      <div class="car-track">
+        <div class="t-card t-print"><img src="imagens/download_1.webp" alt="Mensagem de WhatsApp da cliente Ana Carolina" loading="lazy" decoding="async" width="400" height="500"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_22_1.webp" alt="Mensagem de WhatsApp da cliente Patrícia Almeida" loading="lazy" decoding="async" width="427" height="856"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_2_completo_1.webp" alt="Mensagem de WhatsApp da cliente Mariana Alves" loading="lazy" decoding="async" width="427" height="817"></div>
+        <div class="t-card t-print"><img src="imagens/depoimento_03_1.webp" alt="Comentários de clientes no Instagram" loading="lazy" decoding="async" width="400" height="500"></div>
+        <!-- DEPOIMENTO 1 -->
+        <div class="t-card">
+          <div class="t-photo"><img src="imagens/antes_depois_4_cxxom7gr_1.webp" alt="Antes e depois da Claudia" loading="lazy" decoding="async" width="860" height="860"></div>
+          <div class="t-body">
+            <div class="t-result">-8kg</div>
+            <p class="t-quote">"Voltei a ter energia pra cuidar dos meus filhos."</p>
+            <div class="t-name">Claudia, 36 anos</div>
+            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
+          </div>
+        </div>
+        <!-- DEPOIMENTO 2 -->
+        <div class="t-card">
+          <div class="t-photo"><img src="imagens/depoimento_antes_depois_csldwdkt_1.webp" alt="Antes e depois da Rosana" loading="lazy" decoding="async" width="860" height="860"></div>
+          <div class="t-body">
+            <div class="t-result">-7kg</div>
+            <p class="t-quote">"Minha pressão normalizou e o médico reduziu meu remédio."</p>
+            <div class="t-name">Rosana, 52 anos</div>
+            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
+          </div>
+        </div>
+        <!-- DEPOIMENTO 3 -->
+        <div class="t-card">
+          <div class="t-photo"><img src="imagens/antes_depois_maria_bjz_z_hl_1.webp" alt="Antes e depois da Maria" loading="lazy" decoding="async" width="800" height="1080"></div>
+          <div class="t-body">
+            <div class="t-result">-9kg</div>
+            <p class="t-quote">"Perdi 9kg em 30 dias. Tive que jogar algumas calças e shorts fora."</p>
+            <div class="t-name">Maria, 47 anos</div>
+            <div class="t-stars" aria-label="5 estrelas">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <button class="car-btn next" type="button" aria-label="Próximo depoimento">›</button>
+      <div class="car-dots" role="tablist"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOBRA 5 — O QUE VOCÊ VAI RECEBER ================= -->
 <section class="deliver">
   <div class="wrap narrow">
     <h2>Não é só uma <span class="hl">lista de receitas</span></h2>
@@ -187,7 +230,7 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 5 — BÔNUS ================= -->
+<!-- ================= DOBRA 6 — BÔNUS ================= -->
 <section class="bonus">
   <div class="wrap">
     <h2>Você ainda recebe <span class="hl">6 bônus</span></h2>
@@ -227,7 +270,7 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 6 — AUTORIDADE ================= -->
+<!-- ================= DOBRA 7 — AUTORIDADE ================= -->
 <section class="author">
   <div class="wrap narrow">
     <div class="author-photo reveal">
@@ -244,7 +287,7 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 7 — OFERTA ================= -->
+<!-- ================= DOBRA 8 — OFERTA ================= -->
 <section class="plans" id="planos">
   <div class="wrap">
     <h2>Escolha a opção ideal para <span class="hl">sua rotina</span></h2>
@@ -272,7 +315,7 @@ window.addEventListener("load",function(){setTimeout(function(){
           <div class="big-price"><small>R$</small>29<small>,90</small></div>
         </div>
         <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="btn" id="premiumBtn">Quero o plano premium</a>
-        <div class="safe">Acesso imediato · Compra Segura · Garantia de 90 dias</div>
+        <div class="safe">Acesso imediato · Compra Segura · Garantia de 30 dias</div>
       </div>
 
       <!-- PLANO BÁSICO -->
@@ -288,21 +331,21 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 8 — GARANTIA ================= -->
+<!-- ================= DOBRA 9 — GARANTIA ================= -->
 <section class="guarantee">
   <div class="wrap">
     <div class="g-box reveal">
       <svg class="seal" viewBox="0 0 160 160" aria-hidden="true">
         <circle cx="80" cy="80" r="76" fill="#E8772E"/>
         <circle cx="80" cy="80" r="64" fill="none" stroke="#FFF8EE" stroke-width="2" stroke-dasharray="4 5"/>
-        <text x="80" y="78" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="50" fill="#FFF8EE">90</text>
+        <text x="80" y="78" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="50" fill="#FFF8EE">30</text>
         <text x="80" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="#FFF8EE">DIAS</text>
         <text x="80" y="120" text-anchor="middle" font-family="Roboto, sans-serif" font-weight="600" font-size="10" letter-spacing="1.5" fill="#FFF8EE">DE GARANTIA</text>
       </svg>
       <div>
-        <h2>Garantia incondicional de <span class="hl">90 dias</span></h2>
+        <h2>Garantia incondicional de <span class="hl">30 dias</span></h2>
         <p>Você pode acessar o material e conhecer todas as receitas com tranquilidade.</p>
-        <p>Se dentro de 90 dias achar que o produto não é para você, basta solicitar o reembolso.</p>
+        <p>Se dentro de 30 dias achar que o produto não é para você, basta solicitar o reembolso.</p>
         <p>Você recebe 100% do seu dinheiro de volta.</p>
         <p class="strong">Sem perguntas. Sem burocracia.</p>
       </div>
@@ -310,7 +353,7 @@ window.addEventListener("load",function(){setTimeout(function(){
   </div>
 </section>
 
-<!-- ================= DOBRA 9 — FAQ ================= -->
+<!-- ================= DOBRA 10 — FAQ ================= -->
 <section class="faq">
   <div class="wrap narrow">
     <h2>Perguntas <span class="hl">frequentes</span></h2>
@@ -341,7 +384,7 @@ window.addEventListener("load",function(){setTimeout(function(){
       </details>
       <details>
         <summary>Como funciona a garantia?</summary>
-        <p>Você tem 90 dias para conhecer o material. Dentro desse período, pode solicitar o reembolso caso decida que ele não é para você.</p>
+        <p>Você tem 30 dias para conhecer o material. Dentro desse período, pode solicitar o reembolso caso decida que ele não é para você.</p>
       </details>
     </div>
   </div>
