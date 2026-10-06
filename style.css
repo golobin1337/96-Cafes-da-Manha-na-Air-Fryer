@@ -734,3 +734,22 @@ footer { padding-bottom: 110px; }
 .plan .basic-out li svg { flex: none; width: 16px; height: 16px; color: #A9AD9A !important; margin-top: 3px; }
 .plan.basic .from, .plan.basic .price { text-align: center; }
 .plan.basic .btn { display: block; width: calc(100% - 44px); margin: 20px auto 0; }
+
+/* ====== TOTAL DOS BÔNUS ====== */
+.bonus-sum {
+  max-width: 520px; margin: 36px auto 0; text-align: center;
+  background: var(--white); border: 2px dashed var(--orange); border-radius: 20px;
+  padding: 24px 20px; box-shadow: var(--shadow);
+}
+.bs-label {
+  font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--coffee-2);
+}
+.bs-old {
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; font-size: 30px; line-height: 1.2;
+  color: var(--red); text-decoration: line-through; text-decoration-thickness: 3px; margin: 6px 0 2px;
+}
+.bs-free {
+  font-family: "Poppins", "Poppins Fallback", sans-serif; font-weight: 800; text-transform: uppercase;
+  font-size: clamp(30px, 6vw, 40px); line-height: 1.1; color: var(--green);
+}
+.bs-note { margin-top: 10px; font-size: 15.5px; color: var(--coffee-2); }
