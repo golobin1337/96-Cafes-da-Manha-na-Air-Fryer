@@ -281,13 +281,14 @@ window.addEventListener("load",function(){setTimeout(function(){
       <!-- PLANO BÁSICO -->
       <div class="plan basic reveal">
         <div class="basic-head">Plano básico · só as receitas</div>
+        <div class="plan-img"><img src="imagens/price.webp" alt="Livro 96 Cafés da Manhã na Air Fryer" loading="lazy" decoding="async" width="395" height="327"></div>
         <h3>36 Receitas de Café da Manhã na Air Fryer</h3>
         <ul class="basic-list">
-          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>36 receitas de café da manhã na Air Fryer</li>
-          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Ingredientes e quantidades</li>
-          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Tempo e temperatura da Air Fryer</li>
-          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Passo a passo de preparo</li>
-          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Acesso pelo celular</li>
+          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>96 receitas completas</li>
+          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Lista de compras</li>
+          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Tabela de substituições</li>
+          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>Entrega via WhatsApp e E-mail</li>
+          <li><span class="b-ico"><svg><use href="#i-check"/></svg></span>30 dias de garantia</li>
         </ul>
         <div class="basic-out">
           <div class="bo-title">Não inclui</div>
@@ -396,9 +397,30 @@ window.addEventListener("load",function(){setTimeout(function(){
   <div class="sb-info">
     <strong>Plano Completo</strong>
     <span>de <s>R$ 197</s> por apenas</span>
-    <b>R$ 29,90</b>
+    <b>R$ 27,90</b>
   </div>
   <a href="https://pay.wiapy.com/efAzeKR0gK0R" data-checkout="premium" class="sb-btn" tabindex="-1">Quero o Completo</a>
+</div>
+
+<!-- POPUP DE REDIRECT: abre ao clicar no botão do Plano Básico (R$ 14,90) -->
+<div class="upsell" id="upsell" role="dialog" aria-modal="true" aria-labelledby="upsellTitle" hidden>
+  <div class="up-box">
+    <button class="up-close" type="button" aria-label="Fechar">×</button>
+    <div class="up-tag">Espere! Oferta especial</div>
+    <h3 id="upsellTitle">Leve o <span class="hl">Plano Completo</span> com todos os bônus por só R$ 5 a mais</h3>
+    <div class="up-img"><img src="imagens/price.webp" alt="Plano Completo com os 6 bônus" loading="lazy" decoding="async" width="395" height="327"></div>
+    <ul class="up-list">
+      <li><svg><use href="#i-check"/></svg>96 receitas completas (em vez de 36)</li>
+      <li><svg><use href="#i-check"/></svg>Lista de compras e tabela de substituições</li>
+      <li><svg><use href="#i-gift"/></svg>+ 6 bônus inclusos</li>
+    </ul>
+    <div class="up-price">
+      <span>De <s>R$ 27,90</s> por apenas</span>
+      <strong>R$ 19,90</strong>
+    </div>
+    <a href="https://pay.wiapy.com/XEUp2ljBA7J0" data-checkout="upsell" class="btn up-yes">Sim, quero o completo por R$ 19,90</a>
+    <a href="https://pay.wiapy.com/-2j_wSlt3sEB" data-checkout="basico" class="up-no">Não, quero só o plano básico de R$ 14,90</a>
+  </div>
 </div>
 
 </body>

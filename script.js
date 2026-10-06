@@ -137,3 +137,26 @@ if (stickyBuy && premiumBtn) {
   window.addEventListener("resize", updateSticky);
   updateSticky();
 }
+
+/* ---------- Popup de redirect ----------
+   Ao clicar em "Quero o plano básico", mostra a oferta do Completo por R$ 19,90.
+   A pessoa pode aceitar ou seguir para o Básico de R$ 14,90. */
+const upsell = document.getElementById("upsell");
+const basicBtn = document.querySelector('.plan.basic [data-checkout="basico"]');
+if (upsell && basicBtn) {
+  const openUpsell = (e) => {
+    e.preventDefault();
+    upsell.hidden = false;
+    document.body.classList.add("no-scroll");
+    upsell.querySelector(".up-yes").focus();
+  };
+  const closeUpsell = () => {
+    upsell.hidden = true;
+    document.body.classList.remove("no-scroll");
+    basicBtn.focus();
+  };
+  basicBtn.addEventListener("click", openUpsell);
+  upsell.querySelector(".up-close").addEventListener("click", closeUpsell);
+  upsell.addEventListener("click", (e) => { if (e.target === upsell) closeUpsell(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !upsell.hidden) closeUpsell(); });
+}
