@@ -791,3 +791,6 @@ footer { padding-bottom: 110px; }
   display: block; margin-top: 14px; font-size: 14px; color: var(--coffee-2); text-decoration: underline;
 }
 body.no-scroll { overflow: hidden; }
+.up-list li.up-gift svg { color: var(--orange); }
+.up-list { gap: 6px; }
+.up-list li { font-size: 14.5px; }
