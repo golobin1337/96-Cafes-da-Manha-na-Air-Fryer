@@ -142,7 +142,7 @@ if (stickyBuy && premiumBtn) {
    Ao clicar em "Quero o plano básico", mostra a oferta do Completo por R$ 19,90.
    A pessoa pode aceitar ou seguir para o Básico de R$ 14,90. */
 const upsell = document.getElementById("upsell");
-const basicBtn = document.querySelector('.plan.basic [data-checkout="basico"]');
+const basicBtn = document.getElementById("basicBtn");
 if (upsell && basicBtn) {
   const openUpsell = (e) => {
     e.preventDefault();

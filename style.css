@@ -794,3 +794,7 @@ body.no-scroll { overflow: hidden; }
 .up-list li.up-gift svg { color: var(--orange); }
 .up-list { gap: 6px; }
 .up-list li { font-size: 14.5px; }
+
+/* Botão do Plano Básico (é <button>, abre o popup) */
+button.btn { font-family: inherit; cursor: pointer; border: none; }
+button.btn.ghost { border: 2px solid var(--ink); }
